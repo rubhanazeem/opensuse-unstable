@@ -2,7 +2,7 @@ workflow:
   steps:
     - link_package:
         source_project: home:Rubhan
-        source_package: obs-server
+        source_package: obs-serverx
   filters:
     architectures:
       only:
