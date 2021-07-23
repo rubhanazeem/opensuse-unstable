@@ -1,0 +1,6 @@
+body.user-profile-redesign {
+  #involved-filters {
+    &.sticky-top { top: $top-navigation-height; }
+    .form-inline label { justify-content: left; }
+  }
+}
