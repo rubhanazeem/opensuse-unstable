@@ -1,0 +1,4 @@
+<multibuild>
+  <flavor>obs-bundled-gems</flavor>
+  <flavor>obs-api-testsuite-rspec</flavor>
+</multibuild>

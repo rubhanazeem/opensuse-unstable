@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<services>
+  <service name="obs_scm">
+    <param name="versionformat">2.11~alpha.%ci.%h</param>
+    <param name="url">git://github.com/openSUSE/open-build-service.git</param>
+    <param name="scm">git</param>
+    <param name="revision">master</param>
+    <param name="extract">dist/obs-api-testsuite-rspec.spec</param>
+    <param name="extract">dist/obs-bundled-gems.spec</param>
+    <param name="extract">dist/obs-server.spec</param>
+    <param name="extract">dist/obs-rpmlintrc</param>
+    <param name="extract">dist/gem_build_cleanup.sh</param>
+    <param name="extract">src/api/Gemfile</param>
+    <param name="extract">src/api/Gemfile.lock</param>
+  </service>
+  <service name="bundle_gems">
+    <param name="strategy">cpio</param>
+  </service>
+  <service name="set_version"/>
+  <service name="tar" mode="buildtime"/>
+  <service name="recompress" mode="buildtime">
+    <param name="compression">xz</param>
+    <param name="file">*.tar</param>
+  </service>
+</services>
